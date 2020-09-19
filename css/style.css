@@ -3,11 +3,11 @@
     height:500px;
     display: flex;
     flex-direction:row;/*column - row-reverse - column-reverse*/
-    flex-wrap:wrap;/*wrap - wrap-reverse*/
+    flex-wrap:nowrap;/*wrap - wrap-reverse*/
     /*flex-flow: row nowrap;/*forma abreviada de escrever flex-direction e flex-wrap*/
     justify-content:flex-start;
     /*flex-end | center | space-between | space-around*/
-    align-items:stretch;/*flex-start | flex-end | center | baseline*/
+    align-items:stretch;/*esticar*//*flex-start | flex-end | center | baseline*/
     align-content:flex-start;
 }
 .item{
@@ -15,10 +15,20 @@
     color:#fff;
     padding:20px;
     margin:5px;
-    width:30px;
+    
     height:30px;
+
+    flex-grow:1;/*crescer*//*define a largura dos itens - o padrão é 0*/
+    /*se colocar 1 irá ocupar toda largura do container de maneira igual - posso tirar a largura width*/
+    flex-shrink: 1;/*encolher*/
+    flex-basis:300px;/*será a largura inicial dos itens para servir como base para o grow*/
+    flex: 1 1 300px;/*short hand de flex-grouw|shrink|basis*/
 }
-.article-01 {order:1; align-self:center;}
+/*ordenação fácil dos itens*/
+/*.article-01 {order:1; align-self:auto;flex-grow:3;}
 .article-02 {order:2;}
 .article-03 {order:3;}
-.article-04 {order:4;}
+.article-04 {order:4;}*/
+
+.article-01 {}
+.article-02 {}
