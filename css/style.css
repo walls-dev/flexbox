@@ -8,13 +8,17 @@
     justify-content:flex-start;
     /*flex-end | center | space-between | space-around*/
     align-items:stretch;/*flex-start | flex-end | center | baseline*/
-    align-content:stretch;
+    align-content:flex-start;
 }
 .item{
     background-color:#333;
     color:#fff;
     padding:20px;
     margin:5px;
-    width:200px;
-   
+    width:30px;
+    height:30px;
 }
+.article-01 {order:1; align-self:center;}
+.article-02 {order:2;}
+.article-03 {order:3;}
+.article-04 {order:4;}
